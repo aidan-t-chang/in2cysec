@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>In2 CySec</title>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #000;
+    color: #e5e5e5;
+    font-family: Inter, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  /* GLOBAL GRID BACKGROUND */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background:
+      linear-gradient(rgba(255,255,255,1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px);
+    background-size: 70px 70px;
+    opacity: 0.10;
+    pointer-events: none;
+  }
+
+  /* NAV */
+  nav {
+    padding: 20px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(4px);
+    position: sticky;
+    top: 0;
+    z-index: 5;
+  }
+
+  nav h1 {
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+
+  nav ul {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+  }
+
+  nav a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+  nav a:hover { color: #fff; }
+
+  /* HERO */
+  .hero {
+    padding: 140px 20px 120px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 16px;
+    letter-spacing: 1.4px;
+  }
+
+  .hero p {
+    opacity: 0.75;
+    font-size: 1rem;
+    max-width: 420px;
+    margin: 0 auto;
+    letter-spacing: 1px;
+  }
+
+  /* SECTION */
+  section {
+    padding: 80px 20px;
+    max-width: 900px;
+    margin: auto;
+  }
+
+  .title {
+    font-size: 1.45rem;
+    font-weight: 700;
+    margin-bottom: 28px;
+  }
+
+  .text {
+    font-size: 0.9rem;
+    opacity: 0.72;
+    letter-spacing: 0.9px;
+    line-height: 1.75;
+  }
+
+  /* GRID CARDS */
+  .grid {
+    margin-top: 32px;
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  .card {
+    border: 1px solid rgba(255,255,255,0.10);
+    padding: 24px 20px;
+    border-radius: 8px;
+    background: #080808;
+    transition: 0.18s ease;
+  }
+
+  .card:hover {
+    border-color: rgba(255,255,255,0.22);
+    transform: translateY(-4px);
+  }
+
+  .card h3 {
+    margin-bottom: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  .card p {
+    opacity: 0.65;
+    font-size: 0.85rem;
+    letter-spacing: 0.7px;
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 45px;
+    text-align: center;
+    opacity: 0.4;
+    font-size: 0.8rem;
+    border-top: 1px solid rgba(255,255,255,0.07);
+    margin-top: 80px;
+  }
+</style>
+</head>
+
+<body>
+
+<nav>
+  <h1>IN2 CYSEC</h1>
+  <ul>
+    <li><a href="#about">ABOUT</a></li>
+    <li><a href="#programs">PROGRAMS</a></li>
+    <li><a href="#team">TEAM</a></li>
+  </ul>
+</nav>
+
+<div class="hero">
+  <h2>IN2 CYSEC</h2>
+  <p>SPONSORED BY FORTINET.</p>
+</div>
+
+<section id="about">
+  <div class="title">ABOUT</div>
+  <p class="text">
+    IN2 CYSEC FOCUSES ON PRACTICAL CYBERSECURITY: OFFENSE, DEFENSE, CAPTURE-THE-FLAG,
+    FORENSICS, CRYPTOGRAPHY, AND ADVERSARIAL ANALYSIS. </p>
+</section>
+
+<section id="programs">
+  <div class="title">PROGRAMS</div>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>CTF TEAM</h3>
+      <p>SCRIMS, EXPLOITS, CRYPTO, FORENSICS, NETWORKS — TRAINING FOR REAL COMPETITIONS.</p>
+    </div>
+
+    <div class="card">
+      <h3>WORKSHOPS</h3>
+      <p>REVERSE ENGINEERING, OSINT, WIRESHARK ANALYSIS, PRIV-ESC, AND FULL-STACK SECURITY.</p>
+    </div>
+
+    <div class="card">
+      <h3>RESEARCH</h3>
+      <p>PROJECTS ON SECURITY TOOLS, ADVERSARIAL TECHNIQUES, AND APPLIED THREAT MODELING.</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="team">
+  <div class="title">TEAM</div>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>LAKSH PATEL</h3>
+      <p>PRESIDENT & FOUNDER</p>
+    </div>
+
+    <div class="card">
+      <h3>ANDREW BAE</h3>
+      <p>PRESIDENT & FOUNDER</p>
+    </div>
+
+    <div class="card">
+      <h3>AIDAN CHANG</h3>
+      <p>VICE PRESIDENT</p>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+    EST. 2023
+</footer>
+
+</body>
+</html>
